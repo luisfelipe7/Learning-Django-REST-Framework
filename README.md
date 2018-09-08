@@ -47,13 +47,13 @@ $ pip install -U pip
 # Clone this repository
 $ git clone https://github.com/luisfelipe7/Learning-Django-REST-Framework
 ```
-3. Go into the repository
+4. Go into the repository
 ```bash
 # Go into the repository
 $ cd Learning-Django-REST-Framework
 ```
 
-4. Create a virtual environment
+5. Create a virtual environment
 ```bash
 # Install virtualenv 
 $ sudo pip install virtualenv 
@@ -67,12 +67,12 @@ $ virtualenv env --python=python3
 $ cd env
 $ source bin/activate 
 ```
- 5. With the activated environment, install the requirements:
+ 6. With the activated environment, install the requirements:
  ```bash
 # Install requirements
 $ pip install -r requirements.txt
 ```
-  6. Run it.
+  7. Run it.
 
 ## Run it
 1. Install Postgresql
@@ -143,17 +143,17 @@ host    all             all             ::1/128                 md5
 If you want to allow remote connections, visit this link:
 http://suite.opengeo.org/opengeo-docs/dataadmin/pgGettingStarted/firstconnect.html
 
-4. Sync your models
+6. Sync your models
 ```bash
 # Apply Migrations
 $ python manage.py migrate
 ```
-5. Create a superuser for admin views
+7. Create a superuser for admin views
 ```bash
 # Create a superuser
 $ python manage.py createsuperuser
 ```
-6. Run your development server
+8. Run your development server
 ```bash
 # Run a development server
 $ python manage.py runserver
