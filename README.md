@@ -186,13 +186,16 @@ $ pip install pgadmin4-3.2-py2.py3-none-any.whl
 # Python Version - pgAdmin4.py file
 $ sudo python3.5  "/home/felipe/Escritorio/Solvo/Documentacion Tecnica/Proyectos/Entornos Virtuales/env2/lib/python3.5/site-packages/pgadmin4/pgAdmin4.py"
 ```
-5. Configure it with this image:
+5. Configure it, click on create server and follow these images:<br>
 
+ <a href="https://github.com/luisfelipe7/Learning-Django-REST-Framework.git"><img src="https://rawgit.com/luisfelipe7/Learning-Django-REST-Framework/master/PgAdmin4-Config1.png" alt="Markdownify" width="430"></a>
+  <a href="https://github.com/luisfelipe7/Learning-Django-REST-Framework.git"><img src="https://rawgit.com/luisfelipe7/Learning-Django-REST-Framework/master/PgAdmin4-Config2.png" alt="Markdownify" width="430"></a>
 
 ## Credits
 
-Thanks to Django for the tutorial given on the official website.
+Thanks to Django-REST-Framework for the tutorial given on the official website.
 
+- [Django-REST-Framework](http://www.django-rest-framework.org/)
 - [Python](https://www.python.org/)
 - [Django](https://www.djangoproject.com/)
 
