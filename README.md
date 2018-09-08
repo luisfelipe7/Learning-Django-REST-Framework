@@ -173,7 +173,7 @@ How to install and use Pgadmin :
 # Install flask
 $ pip install flask
 ```
-2. Donwload the Pgadmin from the next url (<b> I don't recommend download the last version, because it have some bugs </b>) :
+2. Donwload the Pgadmin from the next url (<b> I don't recommend to download the last version, because it have some bugs </b>) :
 				https://www.postgresql.org/ftp/pgadmin/pgadmin4/
 3. According to the dowloaded file, install it with the next command:
  
@@ -186,7 +186,7 @@ $ pip install pgadmin4-3.2-py2.py3-none-any.whl
 # Python Version - pgAdmin4.py file
 $ sudo python3.5  "/home/felipe/Escritorio/Solvo/Documentacion Tecnica/Proyectos/Entornos Virtuales/env2/lib/python3.5/site-packages/pgadmin4/pgAdmin4.py"
 ```
-5. Configure it, click on create server and follow these images:<br>
+5. Configure it for your local databases, click on create server and follow these images:<br>
 
  <a href="https://github.com/luisfelipe7/Learning-Django-REST-Framework.git"><img src="https://rawgit.com/luisfelipe7/Learning-Django-REST-Framework/master/PgAdmin4-Config1.png" alt="Markdownify" width="430"></a>
   <a href="https://github.com/luisfelipe7/Learning-Django-REST-Framework.git"><img src="https://rawgit.com/luisfelipe7/Learning-Django-REST-Framework/master/PgAdmin4-Config2.png" alt="Markdownify" width="430"></a>
