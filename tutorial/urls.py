@@ -16,8 +16,15 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from django.conf.urls import url, include
+# Authentication
+from django.conf.urls import include
+# Core API
+from rest_framework.schemas import get_schema_view
 
+schema_view = get_schema_view(title='Pastebin API')
 urlpatterns = [
     path('admin/', admin.site.urls),
+    url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
     url(r'^', include('snippets.urls')), # http://127.0.0.1:8000/
+    path('schema/',schema_view),
 ]

@@ -51,12 +51,19 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
+REST_FRAMEWORK = {
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
+    'PAGE_SIZE': 10
+}
+
 ROOT_URLCONF = 'tutorial.urls'
 
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'default')],
+#       'DIRS': [os.path.join(BASE_DIR, 'templates')],
+#       'DIRS': [os.path.join(BASE_DIR, 'snippets/templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

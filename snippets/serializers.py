@@ -1,16 +1,21 @@
 from rest_framework import serializers
 from snippets.models import Snippet, LANGUAGE_CHOICES, STYLE_CHOICES
+# For User Authentication
+from django.contrib.auth.models import User
+
 
 # The first part of the serializer class defines the fields that get serialized/deserialized. 
 # The create() and update() methods define how fully fledged instances are created or modified when calling serializer.save()
 
 # Good Way to do it
+class SnippetSerializer(serializers.HyperlinkedModelSerializer):
+    owner = serializers.ReadOnlyField(source='owner.username')  # or CharField(read_only=True)
+    highlight = serializers.HyperlinkedIdentityField(view_name='snippet-highlight', format='html')
 
-class SnippetSerializer(serializers.ModelSerializer):
     class Meta:
         model = Snippet
-        fields = ('id', 'title', 'code', 'linenos', 'language', 'style')
-
+        fields = ('url', 'id', 'highlight', 'owner',
+                  'title', 'code', 'linenos', 'language', 'style')
 # Bad Way to do it
 
 # class SnippetSerializer(serializers.Serializer):
@@ -38,3 +43,15 @@ class SnippetSerializer(serializers.ModelSerializer):
 #        instance.style = validated_data.get('style', instance.style)
 #        instance.save()
 #        return instance
+
+
+# For user authentication
+
+class UserSerializer(serializers.HyperlinkedModelSerializer):
+    snippets = serializers.HyperlinkedRelatedField(many=True,view_name='snippet-detail',read_only=True)
+
+    class Meta:
+        model = User
+        fields = ('url', 'id', 'username', 'snippets')
+#  Because 'snippets' is a reverse relationship on the User model, it will not be included by default
+#  when using the ModelSerializer class, so we needed to add an explicit field for it.
